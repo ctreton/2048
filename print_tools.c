@@ -6,13 +6,13 @@
 /*   By: ctreton <ctreton@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/02/28 03:03:00 by ctreton           #+#    #+#             */
-/*   Updated: 2015/02/28 08:41:17 by ctreton          ###   ########.fr       */
+/*   Updated: 2015/02/28 15:30:56 by ctreton          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "main.h"
 
-t_win				get_win_size()
+t_win				get_win_size()//on recupere la taille du terminal, y'a une fonction ncurses qui le fait (getmaxyx()) mais apparremment elle bug avec les signaux
 {
 	t_win			win;
 	struct winsize	w;
@@ -23,7 +23,7 @@ t_win				get_win_size()
 	return (win);
 }
 
-void				resize(int a)
+void				resize(int a)//fonction appeler lors d'un changement de taille de fenetre
 {
 	t_win			win;
 
