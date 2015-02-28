@@ -51,11 +51,8 @@ t_tile			*new_tile(int i)
 	return (tile);
 }
 
-void			print_play4(t_play4 *p4)
+void			print_play4(t_play4 *p4, t_win win)
 {
-	t_win		win;
-
-	win = get_win_size();
 	print_play4_frame(win);
 	print_play4_tiles(p4, win);
 }

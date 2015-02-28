@@ -12,11 +12,8 @@
 
 #include "main.h"
 
-void		print_menu(t_menu *menu)
+void		print_menu(t_menu *menu, t_win win)
 {
-	t_win	win;
-
-	win = get_win_size();
 	print_menu_frame(win);
 	print_menu_text(menu, win);
 }
